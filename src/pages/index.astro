@@ -1,4 +1,6 @@
 ---
+import UserPanel from "../components/UserPanel.astro";
+
 // script section or code fence
 const pageTitle = "Astro";
 
@@ -24,17 +26,8 @@ const currentUser = {
   <body>
     <h3>Astro</h3>
     <button>Click me</button>
-
     {pages.map((page) => <li>{page}</li>)}
-    <p>Welcome {currentUser.name}</p>
-    {
-      currentUser.isAdmin && (
-        <section class="admin-panel">
-          <h3>Admin control panel</h3>
-          <p>Admin functionality goes here</p>
-        </section>
-      )
-    }
+    <UserPanel userName={currentUser.name} isAdminUser={currentUser.isAdmin} />
   </body>
 </html>
 

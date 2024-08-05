@@ -122,5 +122,10 @@ Using script tag
   - is:global
 - script src attribute
   - can reference external scripts
-  - 
+  
+### Astro props
+
+Astro.props is astro global object that is only available on .astro files
+
+
 
