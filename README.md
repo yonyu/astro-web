@@ -144,7 +144,8 @@ Astro uses file-based routing. Each file in the pages/ directory is a route.
 
 http://localhost:4321/articles/learning-javascript
 
+`src/pages/articles/[id]-[title].astro`
 
-
+http://localhost:4321/articles/1-learning-javascript
 
 
