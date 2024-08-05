@@ -81,3 +81,26 @@ run the following command to disable telemetry collection:
 
     npx astro telemetry disable
 
+
+# Astro Basics
+
+## Rendering modes
+
+- By default, Astro applies 'Static site generation' (SSG)
+  - output: 'static' // fully static, in dist/ folder
+- Server-side rendering (SSR)
+  - output: 'server' // mostly SSR, some static
+  - output: 'hybrid' // mostly static, some SSR
+
+## Components
+
+Any file with '.astro' extension is an Astro component. It can have two sections.
+
+Script section
+
+template section
+
+### Styling
+
+template directives
+
