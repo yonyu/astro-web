@@ -102,5 +102,6 @@ template section
 
 ### Styling
 
-template directives
+Using style tag
+- Will create a data scope
 
