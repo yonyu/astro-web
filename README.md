@@ -157,4 +157,20 @@ Rename the file to [id]-[title].astro
 
 In the browser, navigate to: http://localhost:4321/articles/1-learning-javascript
 
+### routing markdown files
+
+Create a folder 'posts' under 'pages' folder
+
+Create a markdown file '1-post.md' under 'posts' folder
+
+Can access the file at: http://localhost:4321/posts/1-post
+
+Use index.astro to list all martdown posts
+
+    const posts = await Astro.glob('./*.md')
+
+it has `frontmatter` property:
+    
+        const { title } = posts[0].frontmatter.title
+
 
