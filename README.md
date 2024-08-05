@@ -136,4 +136,15 @@ Astro uses file-based routing. Each file in the pages/ directory is a route.
 
 ### contact.md
 
+### html pages are supported
+
+### dynamic routes
+
+`src/pages/articles/[title].astro`
+
+http://localhost:4321/articles/learning-javascript
+
+
+
+
 
