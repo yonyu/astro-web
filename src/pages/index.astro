@@ -2,6 +2,9 @@
 import UserPanel from "../components/UserPanel.astro";
 import Layout from "../layouts/Layout.astro";
 
+import { Counter as ReactCounter } from "../components/ReactCounter";
+import VueCounter from "../components/VueCounter.vue";
+
 // script section or code fence
 const pageTitle = "Astro Demo";
 
@@ -18,7 +21,9 @@ const currentUser = {
 <!-- template section -->
 <Layout pageTitle={pageTitle}>
   <h1>Astro</h1>
-  <button>Click me</button>
+  <ReactCounter client:only="react"><h3>This is a React island</h3></ReactCounter>
+  <VueCounter client:load><h3>This is a Vue island</h3></VueCounter>
+  <button id="button1">Click me</button>
   {pages.map((page) => (
       <li>{page}</li>
   ))}
@@ -28,3 +33,18 @@ const currentUser = {
 <script src="../scripts">
 </script>
 <script is:inline src="/external-script.js" defer></script>
+
+<!-- https://github.com/withastro/astro/blob/main/examples/framework-multiple/src/styles/global.css -->
+<style is:global>
+  .counter {
+    display: grid;
+    font-size: 2em;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 2em;
+    place-items: center;
+  }
+
+  .counter-message {
+    text-align: center;
+  }
+</style>

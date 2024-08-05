@@ -221,7 +221,10 @@ Add react and vue into Astro project
 
     npx astro add react vue
 
+There are many integrations that are available in Astro project. Check the [list](https://docs.astro.build/en/guides/integrations-guide/)
 
+By default, islands component from other libraries are not hydrated. To hydrate them, use the `client:load` attribute.
 
+    <ReactCounter client:load>
 
 
