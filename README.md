@@ -108,4 +108,6 @@ Using style tag
 Template directives
 - `is:global`
 
+Using script tag
+- script inside script tag will be sent to the client side
 
