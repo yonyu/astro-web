@@ -173,4 +173,55 @@ it has `frontmatter` property:
     
         const { title } = posts[0].frontmatter.title
 
+## Islands architecture of Astro
+
+### What is hydration?
+
+Hydration is the process of turning static HTML into a fully interactive web page.
+
+Hydration is when we add client-side JavaScript to a web page that has already been rendered statically or with
+server-side rendering. Hydration makes the web page interactive and dynamic. 
+
+Hydration can be simply as adding an event listener to a static HTML button that has been rendered on the page.
+
+#### Selective hydration
+
+Astro islands architecture involves *selective hydration*.
+
+Selective hydration is the process of choosing which parts of the page to hydrate and which parts to leave as static HTML.
+
+Astro uses islands architecture to selectively hydrate parts of the page.
+
+### What is islands architecture?
+
+Astro uses islands architecture to hydrate only the parts of the page that need to be interactive.
+
+Islands architecture is defined as an architecture where a web page content is generated at build time or demand by 
+a web server and then certain sections of the web page are selectively hydrated by the client-side JavaScript.
+
+The islands architecture results in much faster rendering performance as page content is ready to render, and
+client side JavaScript is only used selectively.
+
+Script tags can be used inside Astro components. It is a form of hydration. But it is important to note that
+the scripts inside Astro components run in the global scope, so they are not considered to be islands.
+
+We can use components from different frameworks or libraries in the same Astro page. This is possible because
+Astro treats each component from different frameworks as island component.
+
+Islands architecture is a great way to implement micro frontends.
+
+### Examples of islands components
+
+Here is a good [example](https://github.com/withastro/astro/tree/main/examples/framework-multiple) of Microfrontends 
+with Astro.
+
+## Enable react or vue in Astro
+
+Add react and vue into Astro project
+
+    npx astro add react vue
+
+
+
+
 
