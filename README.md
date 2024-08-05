@@ -104,4 +104,8 @@ template section
 
 Using style tag
 - Will create a data scope
+  
+Template directives
+- `is:global`
+
 
