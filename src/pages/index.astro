@@ -1,12 +1,13 @@
 ---
 import UserPanel from "../components/UserPanel.astro";
+import Layout from "../layouts/Layout.astro";
 
 // script section or code fence
-const pageTitle = "Astro";
+const pageTitle = "Astro Demo";
 
 const pages = ["Home", "Blog", "About us", "Contact us"];
 
-// hard coded data User object but we could retrieve a user session from
+// hard coded data User object, but we could retrieve a user session from
 // our authentication provider, decode a JWT token, or read cookies.
 const currentUser = {
   name: "John Doe",
@@ -15,21 +16,14 @@ const currentUser = {
 ---
 
 <!-- template section -->
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <h3>Astro</h3>
-    <button>Click me</button>
-    {pages.map((page) => <li>{page}</li>)}
-    <UserPanel userName={currentUser.name} isAdminUser={currentUser.isAdmin} />
-  </body>
-</html>
+<Layout pageTitle={pageTitle}>
+  <h1>Astro</h1>
+  <button>Click me</button>
+  {pages.map((page) => (
+      <li>{page}</li>
+  ))}
+  <UserPanel userName={currentUser.name} isAdminUser={currentUser.isAdmin} />
+</Layout>
 
 <script src="../scripts">
 </script>
