@@ -111,3 +111,16 @@ Template directives
 Using script tag
 - script inside script tag will be sent to the client side
 
+    npm run build
+
+    npm run preview
+
+- script attributes
+  
+  - async = is:inline async
+  - is:inline
+  - is:global
+- script src attribute
+  - can reference external scripts
+  - 
+

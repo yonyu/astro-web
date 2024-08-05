@@ -22,7 +22,8 @@ const currentUser = {
     <title>{pageTitle}</title>
   </head>
   <body>
-    <h1>Astro</h1>
+    <h3>Astro</h3>
+    <button>Click me</button>
 
     {pages.map((page) => <li>{page}</li>)}
     <p>Welcome {currentUser.name}</p>
@@ -37,7 +38,7 @@ const currentUser = {
   </body>
 </html>
 
-<style is:global>
+<style>
   .admin-panel {
     border: 2px solid #800000;
     padding: 1rem;
@@ -45,5 +46,7 @@ const currentUser = {
 </style>
 
 <script>
-  console.log("Message from script tag");
+  document.querySelector("button")?.addEventListener("click", () => {
+    alert("Button clicked...");
+  });
 </script>
