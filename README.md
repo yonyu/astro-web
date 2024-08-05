@@ -128,4 +128,12 @@ Using script tag
 Astro.props is astro global object that is only available on .astro files
 
 
+## Routing
+
+Astro uses file-based routing. Each file in the pages/ directory is a route.
+
+### about.astro
+
+### contact.md
+
 
