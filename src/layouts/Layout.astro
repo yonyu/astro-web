@@ -1,6 +1,9 @@
 ---
+import {JSX} from "astro/jsx-runtime";
+
 interface Props {
     pageTitle: string;
+    children: JSX.Element;
 }
 
 const { pageTitle } = Astro.props;
