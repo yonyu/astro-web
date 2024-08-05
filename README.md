@@ -49,25 +49,28 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 # Create an Astro project
 
+Check node version
+
     node --version
+
+Create a new Astro project
 
     npm create astro@latest
 
 then follow the on-screen instructions.
 
-enter the project folder
+Enter the project folder
+    cd project-folder
 
-code .
+Launch the node at the project folder
+    code .
 
 Install 'astro' extension as prompted.
-also install 'MDX' by unified
+Also install 'MDX' extension by unified
 
 Astro has two special folders. Both are under src/:
-
-pages
-
-content
-
+- pages
+- content
 
 pages/ folder
 
@@ -140,12 +143,18 @@ Astro uses file-based routing. Each file in the pages/ directory is a route.
 
 ### dynamic routes
 
+Create articles folder under pages folder, then create a page [title].astro
+
 `src/pages/articles/[title].astro`
 
-http://localhost:4321/articles/learning-javascript
+    npm run dev
+
+In the browser, navigate to: http://localhost:4321/articles/learning-javascript
+
+Rename the file to [id]-[title].astro
 
 `src/pages/articles/[id]-[title].astro`
 
-http://localhost:4321/articles/1-learning-javascript
+In the browser, navigate to: http://localhost:4321/articles/1-learning-javascript
 
 
