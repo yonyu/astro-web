@@ -239,3 +239,51 @@ Create styles folder under src folder and create a file global.css in it.
 Create a layouts folder under src folder and create a file BaseLayout.astro in it.
 
 Create a components folder under src folder and create a file VerticalMenu.astro in it.
+
+Use styles
+
+Set supported browsers (in astro.config.mjs)
+
+    export default defineConfig({
+        vite: {
+            build: ["es2018", "edge42", "safari11", "firefox58", "chrome64"],
+        }
+    });
+
+- affecting css, and javascript
+- only effective on production build
+
+To use LESS
+
+    npm install less
+
+In style
+
+    <style lang="less">
+    </style>
+
+To use Tailwind CSS
+
+    npx astro add tailwindcss
+
+Use css variables
+
+    <style>
+        :root {
+            --color-primary: #333;
+        }
+    </style>
+
+    <style>
+        h1 {
+            color: var(--color-primary);
+        }
+    </style>
+
+
+In style tag, to use css variables defined in code fence, use
+
+    <style define:vars={{activeMenuOptionColor}}>
+
+
+

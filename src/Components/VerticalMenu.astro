@@ -5,9 +5,12 @@ interface Props {
         url: string,
     }>;
     activeOptionUrl: string;
+    activeBackgroundColor?: string;
 }
 
-const { options, activeOptionUrl } = Astro.props;
+const { options, activeOptionUrl, activeBackgroundColor="#800000"} = Astro.props;
+
+const activeMenuOptionColor = '#faf9f6';
 ---
 
 <ul class="menu">
@@ -20,7 +23,7 @@ const { options, activeOptionUrl } = Astro.props;
     }
 </ul>
 
-<style>
+<style define:vars={{activeMenuOptionColor, activeBackgroundColor}}>
     .menu {
         list-style-type: none;
         display: flex;
@@ -31,11 +34,11 @@ const { options, activeOptionUrl } = Astro.props;
             text-decoration: none;
             font-size: 1.25rem;
             padding: 0.75rem 1rem;
-            color: #800000;
+            color: var(--brand-primary);
 
             &.active {
-                background-color: #800000;
-                color: #faf9f6;
+                background-color: var(--activeBackgroundColor);
+                color: var(--activeMenuOptionColor);
             }
         }
     }
