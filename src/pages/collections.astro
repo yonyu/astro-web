@@ -27,10 +27,10 @@ const articles = await getCollection("articles");
     <div class="column">
       <h2>Articles (type: 'content')</h2>
       {
-        articles.map(({ data }) => (
+        articles.map(({data}) => (
           <article class="article" style={{ marginBottom: "2rem" }}>
             <div class="thumbnail">
-              <!-- <Image src={data.thumbnail} alt="" /> -->
+              <Image src={data.thumbnail} alt={data.coverAlt} />
             </div>
             <div class="data">
               <h3>{data.title}</h3>

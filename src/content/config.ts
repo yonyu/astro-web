@@ -1,4 +1,4 @@
-import { z, defineCollection } from 'astro:content'
+import { defineCollection, z } from 'astro:content'
 
 
 const booksCollection = defineCollection({
@@ -9,7 +9,7 @@ const booksCollection = defineCollection({
         isbn: z.string(),
         description: z.string(),
         pages: z.number(),
-    })
+    }),
 });
 
 const articlesCollection = defineCollection({
@@ -21,9 +21,11 @@ const articlesCollection = defineCollection({
         thumbnail: image().refine((img) => img.format === 'jpg', {
             message: 'Thumbnail must be a JPG image'
         }),
-    })
+        coverAlt: z.string(),
+    }),
 });
 
 export const collections = {
-    books: booksCollection
+    books: booksCollection,
+    articles: articlesCollection,
 };

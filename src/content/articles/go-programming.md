@@ -3,6 +3,7 @@ title: Go Programming
 description: Learn to program with this expressive programming language
 pubDate: 2024-03-02
 thumbnail: ../../images/thumbnails/pexels-lisa-fotios-1266302.jpg
+coverAlt: "A photo of leafs in a vase"
 ---
 
 
