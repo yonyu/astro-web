@@ -240,7 +240,7 @@ Create a layouts folder under src folder and create a file BaseLayout.astro in i
 
 Create a components folder under src folder and create a file VerticalMenu.astro in it.
 
-Use styles
+### Use styles
 
 Set supported browsers (in astro.config.mjs)
 
@@ -285,5 +285,5 @@ In style tag, to use css variables defined in code fence, use
 
     <style define:vars={{activeMenuOptionColor}}>
 
-
+### Using URL as states
 
