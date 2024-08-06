@@ -305,3 +305,25 @@ Use optimized image
     const optimizedImage = await getImage({ src: image, format: "webp" });
     const optimizedImageCssUrl = `url(${optimizedImage.src})`;
 
+### Content collections
+
+Create a content folder directly under src\
+
+Content collections are simply collections fo files inside subfolders of 
+the 'content' folder. The name of the subfolder is the name of the collection.
+
+The benefit of creating a collection under 'content' folder instead of just putting files into the 'page' folder is that we can define a schema for our collections and each file can be validated against the schema.
+
+There are two types of collections:
+
+- Content collection: contains MD or MDX files
+- Data collection: contains json, or yaml files
+
+Create a data collection called books
+
+Create a config.ts at books folder
+
+Zod documentation
+
+    <Debug {books}/>
+

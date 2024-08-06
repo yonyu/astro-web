@@ -1,8 +1,22 @@
-index.astro---
+---
+import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Debug from "astro/components/Debug.astro";
 
+const books = await getCollection("books");
 ---
 
 <BaseLayout>
   <h1>Content collections</h1>
+  <h2>Books (type: 'data')</h2>
+  {
+    books.map(({data}) => (
+      <>
+        <h3>{data.title}</h3>
+        <p>{data.author}</p>
+        <p>{data.description}</p>
+        <p>Pages: {data.pages}</p>
+      </>
+    ))
+  }
 </BaseLayout>
