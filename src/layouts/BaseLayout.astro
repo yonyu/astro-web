@@ -10,9 +10,6 @@ const menuOptions = [
     { label: "Html streaming", url: "streaming" },
 ];
 
-const [, currentPage] = Astro.url.pathname.split('/');
-
-
 ---
 
 
@@ -27,7 +24,7 @@ const [, currentPage] = Astro.url.pathname.split('/');
     <body>
     <div class="container">
         <nav class="navigation">
-            <VerticalMenu options={menuOptions} activeOptionUrl={currentPage} />
+            <VerticalMenu options={menuOptions} activeOptionUrl="endpoints" />
         </nav>
         <main>
             <slot />
