@@ -296,3 +296,12 @@ In style tag, to use css variables defined in code fence, use
 Fetch images
 
     const imageFiles = await Astro.glob('../images/nature/*.jpg');
+
+Use optimized image
+
+    import { getImage } from "astro:assets";
+    import image from "../images/nature/pexels-nathan-cowley-1192671.jpg";
+
+    const optimizedImage = await getImage({ src: image, format: "webp" });
+    const optimizedImageCssUrl = `url(${optimizedImage.src})`;
+
