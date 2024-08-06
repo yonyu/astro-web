@@ -228,3 +228,14 @@ By default, islands component from other libraries are not hydrated. To hydrate 
     <ReactCounter client:load>
 
 
+## Advanced Astro
+
+Create a blank Astro project
+
+    npm create astro@latest
+
+Create styles folder under src folder and create a file global.css in it.
+
+Create a layouts folder under src folder and create a file BaseLayout.astro in it.
+
+Create a components folder under src folder and create a file VerticalMenu.astro in it.
