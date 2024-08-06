@@ -10,11 +10,11 @@ interface Props {
 const { options, activeOptionUrl } = Astro.props;
 ---
 
-<ul>
+<ul class="menu">
     {
         options.map(({label, url}) => (
             <li>
-                <a class:list="{['menu-item', { active: url === activeOptionUrl }]}" href={`${url}`}>{label}</a>
+                <a class:list="{['menu-item', { active: url === activeOptionUrl }]}" href={`/${url}`}>{label}</a>
             </li>
         ))
     }
@@ -25,18 +25,18 @@ const { options, activeOptionUrl } = Astro.props;
         list-style-type: none;
         display: flex;
         flex-direction: column;
-    }
 
-    .menu-item {
-        display: block;
-        text-decoration: none;
-        font-size: 1.25rem;
-        padding: 0.75rem;
-        color: #800000;
+        .menu-item {
+            display: block;
+            text-decoration: none;
+            font-size: 1.25rem;
+            padding: 0.75rem 1rem;
+            color: #800000;
 
-        &.active {
-            background-color: #800000;
-            color: #faf9f6;
+            &.active {
+                background-color: #800000;
+                color: #faf9f6;
+            }
         }
     }
 </style>
