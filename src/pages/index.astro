@@ -1,8 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Gallery from "../components/Gallery.astro";
 
+const imageFiles = await Astro.glob('../images/nature/*.jpg');
+
+const images = imageFiles.map((file) => ({
+  data: file.default,
+  alt: "This is a random image",
+}));
 ---
 
 <BaseLayout>
-  <h1>Index page</h1>
+  <h1>Image gallery</h1>
+    <Gallery images={images} />
 </BaseLayout>

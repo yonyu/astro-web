@@ -287,3 +287,12 @@ In style tag, to use css variables defined in code fence, use
 
 ### Using URL as states
 
+### Images
+
+
+    import { Image } from "astro:assets";
+    import type {ImageMetadata} from "astro";
+
+Fetch images
+
+    const imageFiles = await Astro.glob('../images/nature/*.jpg');
